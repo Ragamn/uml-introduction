@@ -19,7 +19,7 @@ rectangle ホテル予約システム {
 従業員 <|-- 管理者 
 従業員 --> 空室状況を入力する
 キャンペーン ..> input: <<extend>>
-input ..> ログインする: <<extend>>
+input ..> ログインする: <<include>>
 予約の集計をする ..> ログインする: <<include>>
 空室状況を入力する ..> ログインする: <<include>>
 @enduml
