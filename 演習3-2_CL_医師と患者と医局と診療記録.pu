@@ -1,0 +1,11 @@
+@startuml
+class 医師 {
+- 医局 : String
+---
+- 診察記録作成() : void 
+}
+class 患者 {
+- 担当医 : String
+}
+医師 "1" --> "*" 患者: <<診察>>
+@enduml
