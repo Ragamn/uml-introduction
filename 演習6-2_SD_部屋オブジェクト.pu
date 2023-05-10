@@ -1,14 +1,9 @@
 @startuml
-    state entry <<entryPoint>>
-    state exit <<exitPoint>>
+    [*] -right-> 空室
     state c <<choice>>
-    entry -> 空室
     空室 --> 予約済 : 予約する
     予約済 --> c
     c -> 空室 : キャンセルする
     c -> 使用 : チェックインする
-    使用 -> 空室 : チェックアウトする
-    空室 -right-> exit
-    [*] --> entry
-    exit -> [*]
+    使用 -> [*]
 @enduml
